@@ -1,6 +1,6 @@
 # ACM Club Website
 
-Welcome to the official repository for the Association for Computing Machinery Club website Association for Computing Machinery at Temple University. This project is built using Next.js to provide a modern, performant, and easy-to-maintain website for our organization.
+Welcome to the official repository for the Association for Computing Machinery Club website at Temple University. This project is built using Next.js to provide a modern, performant, and easy-to-maintain website for our organization.
 
 ## Table of Contents
 
@@ -91,8 +91,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-TUDev - tudev@temple.edu
+TUDev - tuacm@temple.edu
 
-Project Link: https://github.com/daveyloder/tudev-nextjs
+Project Link: https://github.com/daveyloder/ACMNextJSWebsite
 
 Feel free to modify any section as per your specific needs and details. If you have any additional information or sections you'd like to include, let me know!
