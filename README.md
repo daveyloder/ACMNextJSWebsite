@@ -15,7 +15,7 @@ Welcome to the official repository for the Association for Computing Machinery C
 
 ## About the Project
 
-TUDev is a student club at Temple University dedicated to fostering a community of hackers and makers. Our website serves as a hub for information about upcoming events, projects, and resources for our members.
+ACM is a chapter of a student club at Temple University dedicated to fostering a community of CIS. Our website serves as a hub for information about upcoming events, projects, and resources for our members.
 
 ### Built With
 

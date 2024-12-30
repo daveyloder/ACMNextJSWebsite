@@ -36,16 +36,29 @@ function NavbarComponent() {
       className={isScrolled ? "navbar-default isTop" : "navbar-default"}
       fixed="top"
       expand="lg"
-      light
+      dark
     >
       <div className="navbar-header">
         <Link href="/" className="navbar-brand">
-          Association for Computing Machinery
+          <div className="nav-content">
+            <div className="nav-logo">
+              <img
+                src="/images/acm_logo.png"
+                alt="ACM logo"
+                className="img-fluid"
+                style={{ width: 50 }}
+              />
+            </div>
+            <div className="nav-title text-white">
+              Association for Computing Machinery{" "}
+              <span className="brand-uni text-white">Temple University</span>
+            </div>
+          </div>
         </Link>
       </div>
       <NavbarToggler onClick={toggle} navbar />
       <Collapse isOpen={isOpen} navbar>
-        <Nav className="ml-auto navbar-nav">
+        <Nav className="ms-auto navbar-nav">
           {leftNavLinks.map((link) => {
             return (
               <NavItem key={link.id}>

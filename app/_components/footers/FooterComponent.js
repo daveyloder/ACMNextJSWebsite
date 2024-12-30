@@ -34,7 +34,10 @@ function Footer() {
             {/* Grid column - 1 */}
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               {/* Content */}
-              <h6 className="text-uppercase fw-bold mb-4">ACM</h6>
+              <h6 className="text-uppercase fw-bold mb-4">
+                Temple University Student Chapter of the Association for
+                Computing Machinery
+              </h6>
               <p>
                 We are a student club established at Temple University. We are a
                 focused community of designers, developers, hackers, and makers.
@@ -88,17 +91,33 @@ function Footer() {
       </section>
       {/* Copyright */}
 
-      <div className=" p-4" style={{ backgroundColor: "rgba(0,0,0,0.05)" }}>
-        <p>
-          &copy; Temple University ACM. All Rights Reserved. Developed in
-          partnership with{" "}
-          <Link
-            href="https:tudev.org"
-            className="text-reset text-decoration-none"
-          >
-            TUDev
-          </Link>
-        </p>
+      <div
+        className=" p-4 text-white"
+        style={{ backgroundColor: "#000", font: "Poppins" }}
+      >
+        <div className="d-flex align-items-center">
+          <img
+            src="/images/acm_logo.png"
+            alt="ACM logo"
+            className="footer-logo"
+          />{" "}
+          <p className="footer-text ps-4">
+            &copy; Temple University ACM. All Rights Reserved. Developed in
+            partnership with{" "}
+            <Link
+              href="https:tudev.org"
+              className="text-reset text-decoration-none"
+            >
+              TUDev{" "}
+              <img
+                src="/images/tudevog_logo_white.png"
+                alt="TUDev Logo"
+                className="img-fluid"
+                width={20}
+              />
+            </Link>
+          </p>
+        </div>
       </div>
 
       {/* Copyright */}
