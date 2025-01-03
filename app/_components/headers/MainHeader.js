@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
+import NavbarComponent from "@/app/_components/navbars/NavbarComponent";
 
 function MainHeader({ pageHeader }) {
   const overlayStyle = {};
@@ -17,6 +18,7 @@ function MainHeader({ pageHeader }) {
         }}
         className="site-header"
       >
+        <NavbarComponent />
         <div className="page-titlebar">
           <Container>
             <h1 className="page-title">{pageHeader}</h1>

@@ -34,6 +34,7 @@ a {
 /*
 * Home Navigation
 */
+
 .navbar-toggler {
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -522,6 +523,9 @@ a {
 }
 
 @media (min-width: 992px) { 
+    .navbar-default{
+        height: 0;
+    }
     .homepage-title h1 {
         font-size:3.5rem;
     }

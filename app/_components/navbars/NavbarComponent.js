@@ -33,8 +33,7 @@ function NavbarComponent() {
 
   return (
     <Navbar
-      className={isScrolled ? "navbar-default isTop" : "navbar-default"}
-      fixed="top"
+      className={isScrolled ? "navbar-default isNotTop" : "navbar-default"}
       expand="lg"
       dark
     >

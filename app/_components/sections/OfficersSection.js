@@ -8,18 +8,18 @@ function OfficerSection({ members }) {
 
   return (
     <>
-      <section id="officers" className="py-16">
+      <section id="officers" className="py-5">
         <Container className="mx-auto px-4">
           <Row>
             <Col lg={12}>
-              <div className="text-center mb-12">
+              <div className="text-center">
                 <h1>
                   <i
                     className="bi bi-person-circle"
                     style={{ color: "#a41e35" }}
                   ></i>
                 </h1>
-                <h2 className="text-3xl font-bold mb-4">Our Board Members</h2>
+                <h2 className="text-3xl font-bold mb-4">Our E-Board Members</h2>
               </div>
             </Col>
           </Row>
