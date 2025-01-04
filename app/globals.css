@@ -497,7 +497,11 @@ a {
         height: 56px;
     }
 }
-
+@media (min-width: 380px){
+    .navbar-default{
+        height: 56px;
+    }
+}
 @media (min-width: 576px) { 
 
 }
