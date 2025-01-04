@@ -494,7 +494,7 @@ a {
 }
 @media (min-width: 363px){
     .navbar-default{
-        height: 56px;
+        height: 16px;
     }
 }
 @media (min-width: 380px){
