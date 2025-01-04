@@ -17,7 +17,7 @@ const PostFooter = () => {
             &copy; Temple University ACM. All Rights Reserved. Developed in
             partnership with{" "}
             <Link
-              href="https:tudev.org"
+              href="https://tudev.org"
               className="text-reset text-decoration-none"
             >
               TUDev{" "}
