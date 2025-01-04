@@ -70,7 +70,7 @@ a {
 * General Navigation
 */
 .navbar-default{
-    height: 56px;
+    height: 0px;
  }
 .brand-uni {
     display: block;
@@ -491,6 +491,11 @@ a {
     max-width: 75px;
     height: auto;
     padding: 2rem 0;
+}
+@media (min-width: 363px){
+    .navbar-default{
+        height: 56px;
+    }
 }
 
 @media (min-width: 576px) { 
