@@ -45,34 +45,41 @@ const EventSection = () => {
       <div className="container ">
         <h2 className="text-center text-white mb-4">Upcoming Events</h2>
         <Row>
-          {events.map((event, index) => (
-            <Col md="4" key={index} className="mb-4">
-              <Card className="d-flex flex-column h-100">
-                <CardBody
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <CardTitle tag="h5">{event.title}</CardTitle>
-                  <CardText className="text-muted">
-                    <FaCalendarAlt /> {event.date}
-                  </CardText>
-                  <CardText style={{ maxHeight: "150px", overflowY: "auto" }}>
-                    {event.description}
-                  </CardText>
-                  <Button
-                    href={event.link}
-                    target="_blank"
-                    style={{ backgroundColor: templeRedColor }}
-                  >
-                    View All Events
-                  </Button>
-                </CardBody>
-              </Card>
+          {events.length == 0 ? (
+            <Col className="text-center text-white mb-4">
+              <h4>Currently No Events</h4>
+              <p>Please check back soon!</p>
             </Col>
-          ))}
+          ) : (
+            events.map((event, index) => (
+              <Col md="4" key={index} className="mb-4">
+                <Card className="d-flex flex-column h-100">
+                  <CardBody
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <CardTitle tag="h5">{event.title}</CardTitle>
+                    <CardText className="text-muted">
+                      <FaCalendarAlt /> {event.date}
+                    </CardText>
+                    <CardText style={{ maxHeight: "150px", overflowY: "auto" }}>
+                      {event.description}
+                    </CardText>
+                    <Button
+                      href={event.link}
+                      target="_blank"
+                      style={{ backgroundColor: templeRedColor }}
+                    >
+                      View All Events
+                    </Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))
+          )}
         </Row>
       </div>
     </section>

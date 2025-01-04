@@ -41,7 +41,7 @@ const CallToAction = () => {
         </Row>
 
         <Row className="mt-5">
-          <Col md="4" className="d-flex justify-content-center">
+          <Col md="4" className="d-flex justify-content-center mb-4">
             <Card className="shadow-sm text-center">
               <CardBody>
                 <FaLaptopCode size="3em" style={{ color: templeRedColor }} />
@@ -55,7 +55,7 @@ const CallToAction = () => {
               </CardBody>
             </Card>
           </Col>
-          <Col md="4" className="d-flex justify-content-center">
+          <Col md="4" className="d-flex justify-content-center mb-4">
             <Card className="shadow-sm text-center">
               <CardBody>
                 <FaUniversity size="3em" style={{ color: templeRedColor }} />
@@ -69,7 +69,7 @@ const CallToAction = () => {
               </CardBody>
             </Card>
           </Col>
-          <Col md="4" className="d-flex justify-content-center">
+          <Col md="4" className="d-flex justify-content-center mb-4">
             <Card className="shadow-sm text-center">
               <CardBody>
                 <FaUserPlus size="3em" style={{ color: templeRedColor }} />

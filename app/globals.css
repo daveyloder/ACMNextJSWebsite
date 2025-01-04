@@ -69,6 +69,9 @@ a {
 /*
 * General Navigation
 */
+.navbar-default{
+    height: 56px;
+ }
 .brand-uni {
     display: block;
     font-size: .8rem;

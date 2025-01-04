@@ -1,7 +1,41 @@
-import React from "react";
-import { FaTwitter, FaFacebook, FaGithub, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
-import { SOCIALLINKS } from "@/app/_shared/LINKS";
+import React from "react";
+import { FaFacebook, FaGithub, FaDiscord, FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+const links = [
+  {
+    id: 1,
+    name: "Twitter",
+    href: "https://twitter.com/TempleACM",
+    FaIcon: FaXTwitter,
+  },
+
+  {
+    id: 2,
+    name: "Facebook",
+    href: "https://www.facebook.com/TempleACM/",
+    FaIcon: FaFacebook,
+  },
+  {
+    id: 3,
+    name: "Github",
+    href: "https://github.com/zachgoncalves/Temple-ACM-Theme",
+    FaIcon: FaGithub,
+  },
+  {
+    id: 4,
+    name: "Discord",
+    href: "https://discord.com/invite/TempleACM",
+    FaIcon: FaDiscord,
+  },
+  {
+    id: 5,
+    name: "Email",
+    href: "mailto:tuacm@temple.edu",
+    FaIcon: FaEnvelope,
+  },
+];
 
 const PreFooter = () => {
   return (
@@ -26,13 +60,28 @@ const PreFooter = () => {
           </p>
         </address>
         <div className="footer-social-container">
-          <a
+          {links.map((link) => {
+            return (
+              <a
+                key={link.id}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-social-icon footer-social"
+                title={link.name}
+              >
+                {/* Dynamically render the corresponding icon */}
+                <link.FaIcon size={30} />
+              </a>
+            );
+          })}
+          {/* <a
             href="https://twitter.com/TempleACM"
             target="_blank"
             className="btn btn-social-icon footer-social"
             rel="noopener noreferrer"
           >
-            <FaTwitter size={30} />
+            <FaXTwitter size={30} />
           </a>
           <a
             href="https://www.facebook.com/TempleACM/"
@@ -51,6 +100,14 @@ const PreFooter = () => {
             <FaGithub size={30} />
           </a>
           <a
+            href="https://discord.com/"
+            target="_blank"
+            className="btn btn-social-icon footer-social"
+            rel="noopener noreferrer"
+          >
+            <FaDiscord size={30} />
+          </a>
+          <a
             href="mailto:tuacm@temple.edu"
             title="Email the Temple ACM"
             target="_blank"
@@ -58,7 +115,7 @@ const PreFooter = () => {
             rel="noopener noreferrer"
           >
             <FaEnvelope size={30} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

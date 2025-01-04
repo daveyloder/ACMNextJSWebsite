@@ -6,8 +6,8 @@ import PreFooter from "./_components/footers/PreFooter";
 import PostFooter from "./_components/footers/PostFooter";
 
 export const metadata = {
-  title: "ACM",
-  description: "Temple's cool awesome cool machine cluib",
+  title: "Association for Computing Machinery",
+  description: "Temple University's Association for Computing Machinery",
 };
 
 export default function RootLayout({ children }) {

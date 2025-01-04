@@ -18,7 +18,7 @@ export default function Home() {
       <MainHeader pageHeader={headerMetadata.pageTitle} />
       <AboutSection />
       <CallToAction />
-      <OfficerSection members={MEMBERS} />
+      <OfficerSection />
       <EventsSection />
     </>
   );
