@@ -37,7 +37,11 @@ const events = [
 const EventSection = () => {
   const templeRedColor = "#621220";
   return (
-    <section className="py-5" style={{ backgroundColor: templeRedColor }}>
+    <section
+      id="events"
+      className="py-5"
+      style={{ backgroundColor: templeRedColor }}
+    >
       <div className="container ">
         <h2 className="text-center text-white mb-4">Upcoming Events</h2>
         <Row>
