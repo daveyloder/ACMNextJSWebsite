@@ -24,38 +24,6 @@ function OfficerSection() {
     },
     {
       id: 2,
-      name: "David Loder",
-      position: "President",
-      photo: "/images/uploads/DAvidLoder.jpg",
-      bio: `IS&T Major`,
-      linkedIn: "https://www.linkedin.com/in/daveloder/",
-      email: [
-        {
-          id: 1,
-          name: "School Email",
-          email: "",
-        },
-      ],
-      officer: true,
-    },
-    {
-      id: 3,
-      name: "David Loder",
-      position: "President",
-      photo: "/images/uploads/DAvidLoder.jpg",
-      bio: `IS&T Major`,
-      linkedIn: "https://www.linkedin.com/in/daveloder/",
-      email: [
-        {
-          id: 1,
-          name: "School Email",
-          email: "davidloder92@temple.edu",
-        },
-      ],
-      officer: true,
-    },
-    {
-      id: 4,
       name: "Claudia Pine-Simon",
       position: "Faculty Advisor",
       photo:
@@ -78,7 +46,11 @@ function OfficerSection() {
 
   return (
     <>
-      <section id="officers" className="py-5">
+      <section
+        id="officers"
+        className=" py-5"
+        style={{ backgroundColor: "#f8f9fa" }}
+      >
         <Container className="mx-auto px-4">
           <Row>
             <Col lg={12}>
