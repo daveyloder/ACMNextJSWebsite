@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaGithub, FaDiscord, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaDiscord,
+  FaEnvelope,
+  FaInstagram,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const links = [
@@ -19,18 +25,24 @@ const links = [
   },
   {
     id: 3,
+    name: "Instagram",
+    href: "https://www.instagram.com/acm.temple/",
+    FaIcon: FaInstagram,
+  },
+  {
+    id: 4,
     name: "Github",
     href: "https://github.com/zachgoncalves/Temple-ACM-Theme",
     FaIcon: FaGithub,
   },
   {
-    id: 4,
+    id: 5,
     name: "Discord",
     href: "https://discord.com/invite/TempleACM",
     FaIcon: FaDiscord,
   },
   {
-    id: 5,
+    id: 6,
     name: "Email",
     href: "mailto:tuacm@temple.edu",
     FaIcon: FaEnvelope,

@@ -1,98 +1,128 @@
-# ACM Club Website
+# ACM Temple University Website
 
-Welcome to the official repository for the Association for Computing Machinery Club website at Temple University. This project is built using Next.js to provide a modern, performant, and easy-to-maintain website for our organization.
+This is the official website for the **Association for Computing Machinery (ACM)** at Temple University. The website was built using **Next.js** and developed in collaboration with **TUDev**, Temple University's community of hackers and makers.
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+1. [About ACM](#about-acm)
+2. [Built With](#built-with)
+3. [Collaboration](#collaboration)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Development](#development)
+7. [Contributing](#contributing)
+8. [License](#license)
 
-## About the Project
+---
 
-ACM is a chapter of a student club at Temple University dedicated to fostering a community of CIS. Our website serves as a hub for information about upcoming events, projects, and resources for our members.
+## About ACM
 
-### Built With
+The **Association for Computing Machinery (ACM)** at Temple University is dedicated to fostering a community of tech enthusiasts and future innovators. Our club provides opportunities for learning, networking, and engaging in various computing and tech-related activities. Join us to get involved with hackathons, workshops, and more!
 
-- [React](https://react.dev/) - A front-end JavaScript library for building UI
-- [Next.js](https://nextjs.org/) - A React framework for production
-- [Bootstrap Icons](https://icons.getbootstrap.com/) - UI Icons
-- [Bootstrap](https://getbootstrap.com/) - UI Toolkit
-- [ReactStrap](https://reactstrap.github.io/?path=/story/home-installation--page) - a React component library for Bootstrap
+## Built With
 
-## Getting Started
+This website is built using the following technologies and dependencies:
 
-To get a local copy up and running, follow these simple steps.
+- **Next.js**: React-based framework for building static and dynamic websites.
+- **React**: JavaScript library for building user interfaces.
+- **Bootstrap**: Popular CSS framework for building responsive layouts.
+- **Bootstrap Icons**: Icon library that integrates with Bootstrap.
+- **React Icons**: A set of popular icons as React components.
+- **Reactstrap**: React components for Bootstrap, used for responsive and mobile-first UI design.
 
-### Prerequisites
+### Full List of Dependencies
 
-Make sure you have the following installed:
+- **bootstrap**: `^5.3.3`
+- **bootstrap-icons**: `^1.11.3`
+- **next**: `15.1.3`
+- **react**: `^18.2.0`
+- **react-dom**: `^18.2.0`
+- **react-icons**: `^5.4.0`
+- **reactstrap**: `^9.2.3`
 
-- [Node.js](https://nodejs.org/en/) (v14.x or later)
-- [npm](https://www.npmjs.com/) (v6.x or later) or [yarn](https://yarnpkg.com/) (v1.x or later)
+## Collaboration
 
-### Installation
+This project was developed in partnership with **TUDev**, Temple University's community of hackers and makers. The collaboration aimed to combine ACM's mission to engage with the computing community and TUDev's focus on development and hacking culture.
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/daveyloder/tudev-nextjs.git
-   ```
-2. Install Packages
-   Using NPM:
+---
 
-   ```
-   cd tudev-nextjs
-   npm install
-   ```
+## Installation
 
-   Or Yarn:
+To get started with this project, clone the repository and follow the steps below.
 
-   ```
-   yarn install
-   ```
+### 1. Clone the Repository
 
-### Usage
+```bash
+git clone https://github.com/daveyloder/ACMNextJSWebsite.git
+cd ACMNextJSWebsite
+```
+
+### 2. Install Dependencies
+
+Install the necessary dependencies using npm or yarn:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+## Usage
 
 To run the project locally, use the following command:
 
-```
+```bash
 npm run dev
-```
-
-or if you are using Yarn
-
-```
+# or
 yarn dev
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+This will start the development server at http://localhost:3000. Open your browser and visit this address to view the website locally.
+
+## Development
+
+Starting the Development Server
+To start the development server, run:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+This will allow you to view changes live as you develop. The server will watch for changes and automatically reload the page.
+
+### Build for Production
+
+Once your changes are ready for production, build the optimized production version of the app:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+Run the Production Build Locally
+You can test the production build locally before deploying:
+
+```bash
+npm run start
+# or
+yarn start
+```
 
 ## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+We welcome contributions from students, developers, and all members of the Temple University community! If you would like to contribute, please follow these steps:
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make your changes and commit them (`git commit -m 'Add new feature'`)
+4. Push to your branch (`git push origin feature-name`)
+5. Open a pull request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-TUDev - tuacm@temple.edu
-
-Project Link: https://github.com/daveyloder/ACMNextJSWebsite
-
-Feel free to modify any section as per your specific needs and details. If you have any additional information or sections you'd like to include, let me know!
+This project is licensed under the MIT License - see the LICENSE file for details.
