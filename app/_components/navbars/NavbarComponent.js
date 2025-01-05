@@ -84,7 +84,7 @@ function NavbarComponent() {
           {rightNavLinks.map((link) => {
             return (
               <NavItem key={link.id}>
-                <Link className="nav-link" href={link.href}>
+                <Link className="nav-link text-white" href={link.href}>
                   {link.name} {/* Link text */}
                 </Link>
               </NavItem>
