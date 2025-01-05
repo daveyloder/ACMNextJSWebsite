@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 // Importing necessary components from reactstrap for the navbar
@@ -79,7 +80,7 @@ function NavbarComponent() {
 
       {/* Collapsible section for navigation links on smaller screens */}
       <Collapse isOpen={isOpen} navbar>
-        <Nav className="ms-auto navbar-nav">
+        <Nav style={{ height: "100px" }} className="ms-auto navbar-nav">
           {/* Rendering the navigation links dynamically */}
           {rightNavLinks.map((link) => {
             return (

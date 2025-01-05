@@ -108,9 +108,9 @@ a {
     font-weight: bold;
     transition: 150ms ease-in-out;
 }
-.menu-item a:hover {
+/* .menu-item a:hover {
     color:#AAA;
-}
+} */
 
 /*
 * Home Page 
