@@ -28,17 +28,104 @@ function OfficerSection() {
     },
     {
       id: 2,
+      name: "Fayzaan Awan",
+      position: "",
+      photo:
+        "https://media.licdn.com/dms/image/v2/D4D03AQEt-pGYwn5Y4A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729697233092?e=1741824000&v=beta&t=4Nt3UXgHZUaye_ST4Z2pqyZBvIR_HjsTfDwyBn0DHSQ",
+      bio: `Honors CS Major`,
+      link: "https://www.linkedin.com/in/fayzaanawan/",
+      email: [
+        {
+          id: 1,
+          name: "School Email",
+          email: "",
+        },
+      ],
+      officer: true,
+    },
+    {
+      id: 3,
+      name: "Kush Patel",
+      position: "",
+      photo:
+        "https://media.licdn.com/dms/image/v2/D4E03AQEOfWN-1lcDdw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727487485663?e=1741824000&v=beta&t=nr-TQSXgjexNZmlFQz663nbOpg3rMsD2YL-RODbQw7k",
+      bio: `Honors CS Major`,
+      link: "https://www.linkedin.com/in/kushpatel00/",
+      email: [
+        {
+          id: 1,
+          name: "School Email",
+          email: "",
+        },
+      ],
+      officer: true,
+    },
+    {
+      id: 4,
+      name: "Fernando Lucena",
+      position: "",
+      photo: "/images/uploads/IMG_20241230_032758_966 - Fernando.webp",
+      bio: `Honors CS Major`,
+      link: "https://www.linkedin.com/in/fernando-lucena-83b636254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      githubLink: "",
+      email: [
+        {
+          id: 1,
+          name: "School Email",
+          email: "",
+        },
+      ],
+      officer: true,
+    },
+    {
+      id: 5,
+      name: "Daniel Bicalho",
+      position: "",
+      photo:
+        "https://media.licdn.com/dms/image/v2/D4E03AQG7UgYR53N-6w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727051508579?e=1741824000&v=beta&t=PkTqIKTEyLFJ-mO1npYbRvNE1tIQoZWKS8JL-oI4sAg",
+      bio: `Honors CS Major`,
+      link: "https://www.linkedin.com/in/danielsbicalho/",
+      githubLink: "",
+      email: [
+        {
+          id: 1,
+          name: "School Email",
+          email: "",
+        },
+      ],
+      officer: true,
+    },
+    {
+      id: 6,
+      name: "Adyan Chowdhury",
+      position: "",
+      photo:
+        "https://media.licdn.com/dms/image/v2/D4E03AQF2c3xiESLBHQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708093192880?e=1741824000&v=beta&t=2D27X8FHbVDCeHgU_ZK7wrnRwDCZ-lA3tCILH2ks3TU",
+      bio: `Honors CS Major`,
+      link: "https://www.linkedin.com/in/adyan-chowdhury/",
+      githubLink: "https://github.com/adyan1025",
+      email: [
+        {
+          id: 1,
+          name: "School Email",
+          email: "",
+        },
+      ],
+      officer: true,
+    },
+    {
+      id: 7,
       name: "Claudia Pine-Simon",
       position: "Faculty Advisor",
       photo:
         "https://cis.temple.edu/assets/img/people/ed6469dfdcd34cb21311df6011ec4c8c.jpg",
       bio: "Professor",
-      link: "",
+      link: "https://www.linkedin.com/in/claudia-pine-simon-7b47b11/",
       email: [
         {
           id: 1,
           name: "School Email",
-          email: "claudia.pine-simon@temple.edu",
+          email: "",
         },
       ],
       officer: true,

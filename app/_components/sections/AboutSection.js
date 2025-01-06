@@ -105,7 +105,7 @@ const AboutSection = () => {
             <Button
               color="primary"
               size="lg"
-              href="#join-now" // Link to the "Join Now" section
+              href="https://temple.campuslabs.com/engage/organization/acm" // Link to the "Join Now" section
               style={{
                 backgroundColor: templeRedColor, // Custom button color
                 borderColor: templeRedColor, // Custom border color

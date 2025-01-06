@@ -20,7 +20,7 @@ const links = [
   {
     id: 2,
     name: "Facebook",
-    href: "https://www.facebook.com/TempleACM/",
+    href: "/",
     FaIcon: FaFacebook,
   },
   {
@@ -32,13 +32,13 @@ const links = [
   {
     id: 4,
     name: "Github",
-    href: "https://github.com/zachgoncalves/Temple-ACM-Theme",
+    href: "/",
     FaIcon: FaGithub,
   },
   {
     id: 5,
     name: "Discord",
-    href: "https://discord.com/invite/TempleACM",
+    href: "https://discord.gg/EaM5tA62vh",
     FaIcon: FaDiscord,
   },
   {

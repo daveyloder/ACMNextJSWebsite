@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 // Importing icons from react-icons for displaying event-related icons (calendar, code, etc.)
 import { FaCalendarAlt, FaCode, FaUsersCog } from "react-icons/fa";
+import Link from "next/link";
 
 // Array of events for display. Each event includes a title, date, description, and link to more details.
 const events = [
@@ -54,51 +55,26 @@ const EventSection = () => {
 
         {/* Check if there are any events to display */}
         <Row>
-          {events.length == 0 ? (
-            // If no events, show a message
-            <Col className="text-center text-white mb-4">
-              <h4>Currently No Events</h4>
-              <p>Please check back soon!</p>
-            </Col>
-          ) : (
-            // If there are events, map over the events array and display each event in a card
-            events.map((event, index) => (
-              <Col md="4" key={index} className="mb-4">
-                <Card className="d-flex flex-column h-100">
-                  {/* Card Body */}
-                  <CardBody
-                    style={{
-                      display: "flex", // Flexbox for layout inside the card
-                      flexDirection: "column", // Stack content vertically
-                      justifyContent: "space-between", // Ensure spacing between content
-                    }}
-                  >
-                    {/* Event Title */}
-                    <CardTitle tag="h5">{event.title}</CardTitle>
-
-                    {/* Event Date with Icon */}
-                    <CardText className="text-muted">
-                      <FaCalendarAlt /> {event.date}
-                    </CardText>
-
-                    {/* Event Description (limited height and scrollable if too long) */}
-                    <CardText style={{ maxHeight: "150px", overflowY: "auto" }}>
-                      {event.description}
-                    </CardText>
-
-                    {/* Button to link to the event page */}
-                    <Button
-                      href={event.link} // Link to the event details
-                      target="_blank" // Open in a new tab
-                      style={{ backgroundColor: templeRedColor }} // Custom button color
-                    >
-                      View Event
-                    </Button>
-                  </CardBody>
-                </Card>
-              </Col>
-            ))
-          )}
+          <Col className="text-center text-white mb-4">
+            <h4>Click the links below for events!</h4>
+            <div className="flex justify-center gap-4">
+              <Link
+                href="https://discord.gg/EaM5tA62vh"
+                target="_blank"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Join Discord
+              </Link>
+              <Link
+                href="https://temple.campuslabs.com/engage/organization/acm/events"
+                target="_blank"
+                className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Owl Connect Events
+              </Link>
+            </div>
+            <p>Please check back soon for more updates</p>
+          </Col>
         </Row>
       </div>
     </section>
