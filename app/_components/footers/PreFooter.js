@@ -87,47 +87,6 @@ const PreFooter = () => {
               </a>
             );
           })}
-          {/* <a
-            href="https://twitter.com/TempleACM"
-            target="_blank"
-            className="btn btn-social-icon footer-social"
-            rel="noopener noreferrer"
-          >
-            <FaXTwitter size={30} />
-          </a>
-          <a
-            href="https://www.facebook.com/TempleACM/"
-            target="_blank"
-            className="btn btn-social-icon footer-social"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook size={30} />
-          </a>
-          <a
-            href="https://github.com/zachgoncalves/Temple-ACM-Theme"
-            target="_blank"
-            className="btn btn-social-icon footer-social"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={30} />
-          </a>
-          <a
-            href="https://discord.com/"
-            target="_blank"
-            className="btn btn-social-icon footer-social"
-            rel="noopener noreferrer"
-          >
-            <FaDiscord size={30} />
-          </a>
-          <a
-            href="mailto:tuacm@temple.edu"
-            title="Email the Temple ACM"
-            target="_blank"
-            className="btn btn-social-icon footer-social"
-            rel="noopener noreferrer"
-          >
-            <FaEnvelope size={30} />
-          </a> */}
         </div>
       </div>
     </div>
