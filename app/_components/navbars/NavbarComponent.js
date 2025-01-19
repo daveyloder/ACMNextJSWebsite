@@ -11,6 +11,7 @@ import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from "reactstrap";
 const NAVLINKS = [
   { id: 2, name: "About", href: "/#about" },
   { id: 3, name: "Events", href: "/#events" },
+  { id: 4, name: "Our Members", href: "/members" },
 ];
 
 function NavbarComponent() {
