@@ -8,13 +8,6 @@ const MemberProfileCard = ({ member }) => {
   return (
     <Card className="w-64 shadow-lg">
       <CardBody>
-        <img
-          src={`https://avatar.iran.liara.run/username?username=${firstName}+${lastName}`}
-          alt={firstName + " " + lastName}
-          className="bg-info rounded-circle"
-          style={{ width: "30%" }}
-        />
-
         <CardTitle className="text-xl font-bold mb-2">
           {firstName + " " + lastName}
         </CardTitle>
