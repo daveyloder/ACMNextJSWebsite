@@ -17,24 +17,24 @@ const links = [
     FaIcon: FaXTwitter,
   },
 
-  {
-    id: 2,
-    name: "Facebook",
-    href: "/",
-    FaIcon: FaFacebook,
-  },
+  // {
+  //   id: 2,
+  //   name: "Facebook",
+  //   href: "/",
+  //   FaIcon: FaFacebook,
+  // },
   {
     id: 3,
     name: "Instagram",
     href: "https://www.instagram.com/acm.temple/",
     FaIcon: FaInstagram,
   },
-  {
-    id: 4,
-    name: "Github",
-    href: "/",
-    FaIcon: FaGithub,
-  },
+  // {
+  //   id: 4,
+  //   name: "Github",
+  //   href: "/",
+  //   FaIcon: FaGithub,
+  // },
   {
     id: 5,
     name: "Discord",
