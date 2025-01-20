@@ -34,6 +34,7 @@ export default function Home() {
               <p>
                 Updated January 19<sup>th</sup>, 2025
               </p>
+              <p>Currently {MEMBERS.count} members enrolled</p>
             </Col>
           </Row>
           <Row>
