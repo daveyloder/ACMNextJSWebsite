@@ -492,12 +492,17 @@ a {
     height: auto;
     padding: 2rem 0;
 }
-@media (min-width: 363px){
+@media (max-width: 362px){
+    nav>div.container-fluid{
+        margin-top: 32px;
+    }
+}
+/* @media (min-width: 363px){
     .navbar-default{
         height: 16px;
     }
-}
-@media (min-width: 380px){
+} */
+@media (min-width: 379px){
     .navbar-default{
         height: 56px;
     }
