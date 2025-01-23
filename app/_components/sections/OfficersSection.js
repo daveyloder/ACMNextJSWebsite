@@ -14,7 +14,7 @@ function OfficerSection() {
       name: "Seth Bern",
       position: "President",
       photo:
-        "https://media.licdn.com/dms/image/v2/D4E03AQHErxN3hTQwtg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1665495014614?e=1741219200&v=beta&t=oVUKAZwGDm80GCSeIPhaZa0vmLlkYBiF6xpVwgwth6E",
+        "https://media.licdn.com/dms/image/v2/D4E03AQHHJ7owciOrQQ/profile-displayphoto-shrink_400_400/B4EZSJWQUDGgAg-/0/1737471100953?e=1743033600&v=beta&t=1iEz3dyLfsUjdLbDbQNBz_X6yW40Pt3Z7FvvFgUu3s8",
       bio: `IS&T Major`,
       link: "https://www.linkedin.com/in/seth-bernstein-b23a36200/",
       email: [
