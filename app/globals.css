@@ -492,10 +492,23 @@ a {
     height: auto;
     padding: 2rem 0;
 }
+@media (min-width:300px){
+    #mainHeader{
+        height: 467px;
+    }
+    .page-titlebar{
+        margin-top: 260px;
+    }
+}
 
 
-
-@media (min-width: 379px){
+@media (min-width: 362px){
+    #mainHeader{
+        height: 408px
+    }
+    .page-titlebar{
+        margin-top: 210px;
+    }
     .navbar-default{
         height: 56px;
     }
@@ -513,9 +526,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .page-titlebar{
-        margin-top: 161px;
-    }
+    
 
     .menu-item, .menu-item a {
         display: inline-block;
