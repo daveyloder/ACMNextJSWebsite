@@ -52,7 +52,7 @@ function NavbarComponent() {
     <Navbar
       // Dynamic class to change navbar style when the user scrolls down
       className={isScrolled ? "navbar-default isNotTop" : "navbar-default"}
-      expand="lg" // Responsive behavior for large screens
+      expand="md" // Responsive behavior for large screens
       dark // Dark themed navbar
     >
       <div className="navbar-header">
@@ -81,7 +81,7 @@ function NavbarComponent() {
 
       {/* Collapsible section for navigation links on smaller screens */}
       <Collapse isOpen={isOpen} navbar>
-        <Nav style={{ height: "100px" }} className="ms-auto navbar-nav">
+        <Nav className="ms-auto navbar-nav">
           {/* Rendering the navigation links dynamically */}
           {rightNavLinks.map((link) => {
             return (

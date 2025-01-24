@@ -492,11 +492,7 @@ a {
     height: auto;
     padding: 2rem 0;
 }
-@media (max-width: 362px){
-    .page-title{
-        font-size: 2.3rem;
-    }
-}
+
 @media (min-width: 379px){
     .navbar-default{
         height: 56px;
@@ -535,9 +531,9 @@ a {
 }
 
 @media (min-width: 992px) { 
-    .navbar-default{
+    /* .navbar-default{
         height: 0;
-    }
+    } */
     .homepage-title h1 {
         font-size:3.5rem;
     }
