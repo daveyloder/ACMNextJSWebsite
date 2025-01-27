@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    STRAPI_URL: "http://localhost:1338",
+  },
   images: {
     remotePatterns: [
       {

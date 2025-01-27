@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 // Importing necessary components from reactstrap for layout and design
 import {
   Container,
@@ -8,41 +9,75 @@ import {
   Card,
   CardBody,
   CardTitle,
+  CardSubtitle,
   CardText,
 } from "reactstrap";
+import { format } from "date-fns";
 // Importing icons from react-icons for displaying event-related icons (calendar, code, etc.)
 import { FaCalendarAlt, FaCode, FaUsersCog } from "react-icons/fa";
+import LoadingSpinner from "../LoadingSpinner";
 import Link from "next/link";
-
-// Array of events for display. Each event includes a title, date, description, and link to more details.
-const events = [
-  {
-    title: "ACM General Meeting",
-    date: "January 10, 2025",
-    description:
-      "Join us for the first general meeting of the semester where we discuss plans and upcoming activities!",
-    link: "https://temple.campuslabs.com/engage/organization/acm/events",
-  },
-  {
-    title: "Hackathon Preparation Session",
-    date: "January 15, 2025",
-    description:
-      "Get ready for the upcoming hackathon! Learn tips and tricks from experienced hackers.",
-    link: "https://temple.campuslabs.com/engage/organization/acm/events",
-  },
-  {
-    title: "Guest Speaker: AI & ML",
-    date: "January 20, 2025",
-    description:
-      "Hear from an expert in Artificial Intelligence & Machine Learning about the latest trends and innovations.",
-    link: "https://temple.campuslabs.com/engage/organization/acm/events",
-  },
-];
 
 // EventSection Component that displays the upcoming events in a card format
 const EventSection = () => {
   const templeRedColor = "#621220"; // Define the brand color for the section
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("http://localhost:1338/api/events?populate=*");
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const jsonData = await res.json();
+        setEvents(jsonData);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  if (loading) {
+    return (
+      <section
+        id="events" // ID to anchor link this section for navigation purposes
+        className="py-5" // Padding for spacing
+        style={{ backgroundColor: templeRedColor }} // Background color for the section
+      >
+        <div className="container ">
+          <h2 className="text-center text-white mb-4">Upcoming Events</h2>
+          <Row>
+            <Col className="text-center text-white mb-4">
+              <LoadingSpinner />
+            </Col>
+          </Row>
+        </div>
+      </section>
+    );
+  }
+  if (error) {
+    return (
+      <section
+        id="events" // ID to anchor link this section for navigation purposes
+        className="py-5" // Padding for spacing
+        style={{ backgroundColor: templeRedColor }} // Background color for the section
+      >
+        <div className="container ">
+          <h2 className="text-center text-white mb-4">Upcoming Events</h2>
+          <Row>
+            <Col className="text-center text-white mb-4">
+              <p>Unable to load events. Error: {error}</p>
+            </Col>
+          </Row>
+        </div>
+      </section>
+    );
+  }
   return (
     <section
       id="events" // ID to anchor link this section for navigation purposes
@@ -55,26 +90,52 @@ const EventSection = () => {
 
         {/* Check if there are any events to display */}
         <Row>
-          <Col className="text-center text-white mb-4">
-            <h4>Click the links below for events!</h4>
-            <div className="flex justify-center gap-4">
-              <Link
-                href="https://discord.gg/EaM5tA62vh"
-                target="_blank"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Join Discord
-              </Link>
-              <Link
-                href="https://temple.campuslabs.com/engage/organization/acm/events"
-                target="_blank"
-                className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Owl Connect Events
-              </Link>
+          {events.data.map((event) => (
+            <div key={event.id} className="col">
+              <div className="card h-100 shadow-sm" style={{ width: "18rem " }}>
+                {event.coverImage && (
+                  <img
+                    src={process.env.STRAPI_URL + event.coverImage.url}
+                    className="card-img-top"
+                    alt={event.coverImage.alternativeText || event.Title}
+                    style={{ objectFit: "cover" }}
+                  />
+                )}
+                <div className="card-body">
+                  <h5 className="card-title">{event.Title}</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    {format(new Date(event.Date), "PPP")} at{" "}
+                    {format(new Date(event.Date), "p")}
+                  </h6>
+                  <div className="mt-3">
+                    <p className="mb-1">
+                      <small className="text-muted">Location</small>
+                    </p>
+                    <p className="card-text">{event.Location}</p>
+                  </div>
+                  <div className="mt-3">
+                    <p className="mb-1">
+                      <small className="text-muted">Organized by</small>
+                    </p>
+                    <p className="card-text">{event.club.Name || ""}</p>
+                  </div>
+                  <div className="mt-3">
+                    <p className="mb-1">
+                      <small className="text-muted">Description</small>
+                    </p>
+                    <p className="card-text">
+                      {event.Description[0].children[0].text}
+                    </p>
+                  </div>
+                </div>
+                <div className="card-footer bg-transparent">
+                  <small className="text-muted">
+                    Event Type: {event.eventType}
+                  </small>
+                </div>
+              </div>
             </div>
-            <p>Please check back soon for more updates</p>
-          </Col>
+          ))}
         </Row>
       </div>
     </section>
