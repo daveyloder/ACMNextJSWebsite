@@ -49,52 +49,54 @@ function NavbarComponent() {
   }, []); // Empty dependency array means this effect runs once after mount
 
   return (
-    <Navbar
-      // Dynamic class to change navbar style when the user scrolls down
-      className={isScrolled ? "navbar-default isNotTop" : "navbar-default"}
-      expand="md" // Responsive behavior for large screens
-      dark // Dark themed navbar
-    >
-      <div className="navbar-header">
-        <Link href="/" className="navbar-brand">
-          <div className="nav-content">
-            <div className="nav-logo">
-              {/* Logo of the club */}
-              <img
-                src="/images/acm_logo.png"
-                alt="ACM logo"
-                className="img-fluid"
-                style={{ width: 50 }} // Resizing the logo image
-              />
+    <div className="container">
+      <Navbar
+        // Dynamic class to change navbar style when the user scrolls down
+        className={isScrolled ? "navbar-default isNotTop" : "navbar-default"}
+        expand="md" // Responsive behavior for large screens
+        dark // Dark themed navbar
+      >
+        <div className="navbar-header">
+          <Link href="/" className="navbar-brand">
+            <div className="nav-content">
+              <div className="nav-logo">
+                {/* Logo of the club */}
+                <img
+                  src="/images/acm_logo.png"
+                  alt="ACM logo"
+                  className="img-fluid"
+                  style={{ width: 50 }} // Resizing the logo image
+                />
+              </div>
+              <div className="nav-title text-white">
+                {/* Brand name with university name */}
+                Association for Computing Machinery{" "}
+                <span className="brand-uni text-white">Temple University</span>
+              </div>
             </div>
-            <div className="nav-title text-white">
-              {/* Brand name with university name */}
-              Association for Computing Machinery{" "}
-              <span className="brand-uni text-white">Temple University</span>
-            </div>
-          </div>
-        </Link>
-      </div>
+          </Link>
+        </div>
 
-      {/* Toggler button for mobile view */}
-      <NavbarToggler onClick={toggle} navbar />
+        {/* Toggler button for mobile view */}
+        <NavbarToggler onClick={toggle} navbar />
 
-      {/* Collapsible section for navigation links on smaller screens */}
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="ms-auto navbar-nav">
-          {/* Rendering the navigation links dynamically */}
-          {rightNavLinks.map((link) => {
-            return (
-              <NavItem key={link.id}>
-                <Link className="nav-link text-white" href={link.href}>
-                  {link.name} {/* Link text */}
-                </Link>
-              </NavItem>
-            );
-          })}
-        </Nav>
-      </Collapse>
-    </Navbar>
+        {/* Collapsible section for navigation links on smaller screens */}
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ms-auto navbar-nav">
+            {/* Rendering the navigation links dynamically */}
+            {rightNavLinks.map((link) => {
+              return (
+                <NavItem key={link.id}>
+                  <Link className="nav-link text-white" href={link.href}>
+                    {link.name} {/* Link text */}
+                  </Link>
+                </NavItem>
+              );
+            })}
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }
 
