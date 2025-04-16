@@ -18,7 +18,12 @@ const EventSection = () => {
           throw new Error("Network response was not ok");
         }
         const jsonData = await res.json();
-        setEvents(jsonData);
+        const now = new Date();
+        const upcomingEvents = jsonData.data.filter((event) => {
+          const eventDate = new Date(event.Date);
+          return eventDate >= now;
+        });
+        setEvents({ ...jsonData, data: upcomingEvents });
       } catch (error) {
         setError(error.message);
       } finally {
@@ -59,9 +64,23 @@ const EventSection = () => {
 
   if (!events.data || events.data.length === 0) {
     return renderSection(
-      <Col className="text-center">
-        <p>There are no events currently. Please check back again later.</p>
-      </Col>
+      <>
+        <Col className="text-center">
+          <p>
+            There are no events currently or upcoming. Please check back again
+            later.
+          </p>
+        </Col>
+        <Col xs="12" className="text-center mt-4">
+          <Button
+            color="light"
+            href="/events"
+            style={{ color: templeRedColor, fontWeight: "bold" }}
+          >
+            Check Out All Events
+          </Button>
+        </Col>
+      </>
     );
   }
 
