@@ -62,18 +62,21 @@ const EventsPage = () => {
 };
 
 const EventSection = ({ title, events }) => (
-  <div className="mb-6">
-    <h2 className="text-xl font-semibold mb-2">{title}</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4">{title}</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {events.length > 0 ? (
         events.map((event) => (
-          <div key={event.id} className="border p-4 rounded-lg shadow-md">
+          <div
+            key={event.id}
+            className="border p-4 rounded-lg shadow-md transition-transform transform hover:scale-105"
+          >
             <img
               src={"http://localhost:1338" + event.coverImage?.url}
               alt={event.Title}
-              className="w-full h-40 object-cover mb-2"
+              className="w-full h-48 object-cover rounded-lg mb-3"
             />
-            <h3 className="text-lg font-bold">{event.Title}</h3>
+            <h3 className="text-lg font-semibold">{event.Title}</h3>
             <p className="text-sm text-gray-600">
               {new Date(event.Date).toLocaleDateString()}
             </p>

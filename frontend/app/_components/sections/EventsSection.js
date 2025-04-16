@@ -66,9 +66,20 @@ const EventSection = () => {
   }
 
   return renderSection(
-    events.data.map((event) => (
-      <EventCard key={event.id} event={event} />
-    ))
+    <>
+      {events.data.map((event) => (
+        <EventCard key={event.id} event={event} />
+      ))}
+      <Col xs="12" className="text-center mt-4">
+        <Button
+          color="light"
+          href="/events"
+          style={{ color: templeRedColor, fontWeight: "bold" }}
+        >
+          Check Out More Events
+        </Button>
+      </Col>
+    </>
   );
 };
 
