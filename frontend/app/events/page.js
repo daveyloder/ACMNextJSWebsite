@@ -72,7 +72,9 @@ const EventSection = ({ title, events }) => (
             className="border p-4 rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
             <img
-              src={"http://localhost:1338" + event.coverImage?.url}
+              src={
+                process.env.NEXT_PUBLIC_STRAPI_API_URL + event.coverImage?.url
+              }
               alt={event.Title}
               className="w-full h-48 object-cover rounded-lg mb-3"
             />
