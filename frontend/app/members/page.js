@@ -12,6 +12,7 @@ import {
   CardBody,
   CardText,
   CardTitle,
+  Spinner
 } from "reactstrap";
 import Link from "next/link";
 import MainHeader from "@/app/_components/headers/MainHeader";
@@ -30,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await fetch("http://localhost:1338/api/member-roster");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/member-roster`);
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`
@@ -71,7 +72,7 @@ export default function Home() {
       <>
         <MainHeader pageHeader={headerMetadata.pageTitle} />
         <section>
-          <Container className="py-5">Loading members...</Container>
+          <Container className="py-5">Loading members... <Spinner/></Container>
         </section>
       </>
     );

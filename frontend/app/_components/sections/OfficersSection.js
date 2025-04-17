@@ -187,7 +187,7 @@ function OfficerSection() {
                     className="img-fluid rounded" // Ensures the image is responsive and rounded
                     width={150} // Fixed width for the image
                     height={150} // Fixed height for the image
-                    src={process.env.STRAPI_URL + officer.profilePicture.url} // Officer's photo URL
+                    src={process.env.NEXT_PUBLIC_STRAPI_API_URL + officer.profilePicture.url} // Officer's photo URL
                     alt={`${officer.FirstName + " " + officer.LastName} - ${
                       officer.Role
                     }`} // Alt text for the image

@@ -4,8 +4,8 @@ const nextConfig = {
     return [
       {
         source: "/admin",
-        destination: "http://localhost:1338/admin",
-        permanent: true,
+        destination: "http://acm.temple.edu:1338/admin",
+        permanent: false,
       },
     ];
   },

@@ -22,4 +22,4 @@ RUN npm run build
 EXPOSE 1338
 
 # Start the application
-CMD ["npm", "run", "develop"]
+CMD ["npm", "run","develop"]

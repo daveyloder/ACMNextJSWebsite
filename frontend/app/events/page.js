@@ -9,7 +9,7 @@ const EventsPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:1338/api/events?populate=*") // Change this to your actual API endpoint
+    fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/events?populate=*`) // Change this to your actual API endpoint
       .then((res) => res.json())
       .then((data) => {
         setEvents(data.data);
