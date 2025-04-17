@@ -581,3 +581,9 @@ footer {
 }
 @media (min-width: 1920px) {
 }
+
+@media (max-width: 451px) {
+  .page-title {
+    font-size: 2.4rem;
+  }
+}
