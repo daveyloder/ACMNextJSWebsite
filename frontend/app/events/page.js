@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import React, { useState, useEffect } from "react";
 import MainHeader from "../_components/headers/MainHeader";
@@ -62,33 +63,46 @@ const EventsPage = () => {
 };
 
 const EventSection = ({ title, events }) => (
-  <div className="mb-8">
-    <h2 className="text-2xl font-semibold mb-4">{title}</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {events.length > 0 ? (
-        events.map((event) => (
-          <div
+  <div className="mb-5">
+    <h2 className="h4 mb-3">{title}</h2>
+    {events.length > 0 ? (
+      <div className="d-flex overflow-auto pb-3">
+        {events.map((event) => (
+          <Link
+            href={event.eventUrl || "/"} // Adjust the URL path as needed
             key={event.id}
-            className="border p-4 rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="text-decoration-none text-dark"
           >
-            <img
-              src={
-                process.env.NEXT_PUBLIC_STRAPI_API_URL + event.coverImage?.url
-              }
-              alt={event.Title}
-              className="w-full h-48 object-cover rounded-lg mb-3"
-            />
-            <h3 className="text-lg font-semibold">{event.Title}</h3>
-            <p className="text-sm text-gray-600">
-              {new Date(event.Date).toLocaleDateString()}
-            </p>
-            <p className="text-sm">{event.Location}</p>
-          </div>
-        ))
-      ) : (
-        <p>No events available.</p>
-      )}
-    </div>
+            <div
+              className="card me-3 flex-shrink-0 h-100"
+              style={{
+                minWidth: "250px",
+                maxWidth: "250px",
+                cursor: "pointer",
+              }}
+            >
+              <img
+                src={
+                  process.env.NEXT_PUBLIC_STRAPI_API_URL + event.coverImage?.url
+                }
+                alt={event.Title}
+                className="card-img-top"
+                style={{ height: "160px", objectFit: "cover" }}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{event.Title}</h5>
+                <p className="card-text mb-1 text-muted">
+                  {new Date(event.Date).toLocaleDateString()}
+                </p>
+                <p className="card-text">{event.Location}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    ) : (
+      <p>No events available.</p>
+    )}
   </div>
 );
 
