@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import { getStrapiURL } from "@/app/_utils/api";
 import LoadingSpinner from "@/app/_components/LoadingSpinner";
 import EventCard from "@/app/_components/cards/EventCards";
 
@@ -13,7 +12,7 @@ const EventSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(getStrapiURL("/events"));
+        const res = await fetch("/data/acm-events.json");
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
@@ -30,6 +29,7 @@ const EventSection = () => {
         setLoading(false);
       }
     };
+
     fetchData();
   }, []);
 

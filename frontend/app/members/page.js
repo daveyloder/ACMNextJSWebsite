@@ -18,6 +18,8 @@ import Link from "next/link";
 import MainHeader from "@/app/_components/headers/MainHeader";
 import MemberProfileCard from "./_components/cards/MemberProfileCard";
 
+import { MEMBERS } from "../_shared/MEMBERS";
+
 export default function Home() {
   const [members, setMembers] = useState([]);
   const [publishedDate, setPublishedDate] = useState(null);
@@ -83,7 +85,7 @@ export default function Home() {
       <>
         <MainHeader pageHeader={headerMetadata.pageTitle} />
         <section>
-          <Container className="py-5">Erro loading members: {error}</Container>
+          <Container className="py-5">Error loading members: {error}</Container>
         </section>
       </>
     );

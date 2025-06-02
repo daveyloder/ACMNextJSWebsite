@@ -1,0 +1,51 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "Title": "Intro to Git & GitHub",
+        "Description": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Learn the basics of version control using Git and GitHub."
+              }
+            ]
+          }
+        ],
+        "Date": "2025-05-05T18:00:00Z",
+        "Location": "Room 401, Science Hall",
+        "club": { "Name": "ACM" },
+        "eventType": "Workshop",
+        "eventUrl": "/events/git-workshop",
+        "coverImage": {
+          "url": "https://via.placeholder.com/350x180?text=Git+Workshop",
+          "alternativeText": "Intro to Git Workshop"
+        }
+      },
+      {
+        "id": 2,
+        "Title": "Tech Talk: AI in the Real World",
+        "Description": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Explore how AI is used in today's technology landscape."
+              }
+            ]
+          }
+        ],
+        "Date": "2025-05-10T16:00:00Z",
+        "Location": "Online - Zoom",
+        "club": { "Name": "ACM" },
+        "eventType": "Talk",
+        "eventUrl": "/events/ai-talk",
+        "coverImage": {
+          "url": "https://via.placeholder.com/350x180?text=AI+Talk",
+          "alternativeText": "AI Talk"
+        }
+      }
+    ]
+  }
+  

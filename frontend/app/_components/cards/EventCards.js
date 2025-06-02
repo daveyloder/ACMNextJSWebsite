@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Col,
   Card,
@@ -12,16 +11,22 @@ import { format } from "date-fns";
 import Link from "next/link";
 
 const EventCard = ({ event }) => {
+  const descriptionText =
+    event.Description?.[0]?.children?.[0]?.text || event.Description || "No description available";
+
+  const imageUrl = event.coverImage?.url?.startsWith("http")
+    ? event.coverImage.url
+    : process.env.STRAPI_URL
+      ? process.env.STRAPI_URL + event.coverImage?.url
+      : event.coverImage?.url;
+
   return (
     <Col xl={3} lg={4} md={6} sm={10} xs={12} className="mb-4 d-flex">
-      <Link style={{ textDecoration: "none" }} href={event.eventUrl || "/"}>
-        <Card
-          className="h-100 shadow-sm "
-          style={{ width: "100%", maxWidth: "350px", margin: "0 auto" }}
-        >
-          {event.coverImage && (
+      <Link href={event.eventUrl || "/"} style={{ textDecoration: "none", width: "100%" }}>
+        <Card className="h-100 shadow-sm" style={{ maxWidth: "350px", margin: "0 auto" }}>
+          {event.coverImage?.url && (
             <img
-              src={process.env.STRAPI_URL + event.coverImage.url}
+              src={imageUrl}
               className="card-img-top"
               alt={event.coverImage.alternativeText || event.Title}
               style={{ objectFit: "cover", height: "180px" }}
@@ -49,10 +54,7 @@ const EventCard = ({ event }) => {
               <p className="mb-1">
                 <small className="text-muted">Description</small>
               </p>
-              <CardText>
-                {event.Description[0]?.children[0]?.text ||
-                  "No Description availible"}
-              </CardText>
+              <CardText>{descriptionText}</CardText>
             </div>
           </CardBody>
           <div className="card-footer bg-transparent">
