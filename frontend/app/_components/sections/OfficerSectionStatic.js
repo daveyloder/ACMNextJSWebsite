@@ -48,7 +48,7 @@ function OfficerSectionStatic() {
       id: 4,
       name: "Chandu Rachamadugu",
       position: "Co-Vice President",
-      photo: "https://avatar.iran.liara.run/public/10",
+      photo: "/images/uploads/ChanduRachamadugu.jpg",
       bio: ``,
       link: "/",
       githubLink: "",
@@ -65,7 +65,7 @@ function OfficerSectionStatic() {
       id: 5,
       name: "Dev Patel",
       position: "Co-Vice President",
-      photo: "https://avatar.iran.liara.run/public/45",
+      photo: "/images/uploads/DevPatel.jpg",
       bio: ``,
       link: "/",
       githubLink: "",
@@ -82,7 +82,7 @@ function OfficerSectionStatic() {
       id: 6,
       name: "Zephyr Consumido",
       position: "Secretary",
-      photo: "https://avatar.iran.liara.run/public/53",
+      photo: "/images/uploads/ZephyrConsumido.jpg",
       bio: ``,
       link: "/",
       githubLink: "",
@@ -116,7 +116,7 @@ function OfficerSectionStatic() {
       id: 7,
       name: "Antonio Lazaro",
       position: "Community Chair",
-      photo: "https://avatar.iran.liara.run/public/1",
+      photo: "/images/uploads/AntonioLazaro.jpg",
       bio: ``,
       link: "/",
       githubLink: "",
@@ -134,7 +134,7 @@ function OfficerSectionStatic() {
       name: "Beatriz Souza de Cerqueira",
       position: "Community Outreach",
       photo:
-        "https://avatar.iran.liara.run/public/77",
+        "/images/uploads/BeatrizCerqueira.jpg",
       bio: "",
       link: "/",
       email: [
@@ -168,7 +168,7 @@ function OfficerSectionStatic() {
       name: "Kristina Petanaj",
       position: "Social Media Manager",
       photo:
-        "https://avatar.iran.liara.run/public/78",
+        "/images/uploads/KristinaPetanaj.jpg",
       bio: "/",
       link: "/",
       email: [
