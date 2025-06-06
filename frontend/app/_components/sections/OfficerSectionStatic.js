@@ -286,7 +286,7 @@ function OfficerSectionStatic() {
                   >
                     {/* Officer's photo */}
                     <img
-                      className="img-fluid rounded" // Ensures the image is responsive and rounded
+                      className="img-fluid rounded-circle" // Ensures the image is responsive and rounded
                       width={150} // Fixed width for the image
                       height={150} // Fixed height for the image
                       src={officer.photo} // Officer's photo URL
