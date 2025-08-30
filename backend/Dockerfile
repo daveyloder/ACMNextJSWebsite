@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # Expose port 1337
-EXPOSE 1338
+EXPOSE 1337
 
 # Start the application
 CMD ["npm", "run","develop"]

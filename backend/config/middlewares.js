@@ -9,4 +9,13 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://acm.temple.edu'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      headers: '*',
+    },
+  },
 ];

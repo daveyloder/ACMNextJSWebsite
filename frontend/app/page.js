@@ -1,6 +1,9 @@
 "use client";
 
 import React from "react";
+
+import { EVENTS as hardcodedEvents } from '@/app/_shared/EVENTS';
+
 import MainHeader from "@/app/_components/headers/MainHeader";
 import OfficerSectionStatic from "@/app/_components/sections/OfficerSectionStatic";
 import EventsSectionStatic from "@/app/_components/sections/EventsSectionStatic";

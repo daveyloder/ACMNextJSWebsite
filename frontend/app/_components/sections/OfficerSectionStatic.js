@@ -99,7 +99,7 @@ function OfficerSectionStatic() {
       id: 7,
       name: "Avery (Ariunjargal) Terbish",
       position: "Treasurer",
-      photo: "https://avatar.iran.liara.run/public/41",
+      photo: "/images/uploads/AveryTerbish.JPG",
       bio: ``,
       link: "/",
       githubLink: "",
@@ -136,7 +136,7 @@ function OfficerSectionStatic() {
       photo:
         "/images/uploads/BeatrizCerqueira.jpg",
       bio: "",
-      link: "/",
+      link: "https://www.linkedin.com/in/beatrizcerq/",
       email: [
         {
           id: 1,
@@ -151,7 +151,7 @@ function OfficerSectionStatic() {
       name: "John Kroll",
       position: "Social Media Manager",
       photo:
-        "https://avatar.iran.liara.run/public/39",
+        "/images/uploads/JohnKroll.jpg",
       bio: "",
       link: "/",
       email: [
@@ -185,9 +185,9 @@ function OfficerSectionStatic() {
       name: "Manifest (Eric) Akosah Jr.",
       position: "Photographer",
       photo:
-        "https://avatar.iran.liara.run/public/26",
+        "/images/uploads/EricAkosah.jpg",
       bio: "",
-      link: "/",
+      link: "https://www.linkedin.com/in/eakosahjr/",
       email: [
         {
           id: 1,
