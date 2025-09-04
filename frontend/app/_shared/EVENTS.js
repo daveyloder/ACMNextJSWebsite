@@ -29,7 +29,7 @@ export const EVENTS = [
     {
         id: 4,
         Title: "Lockheed Martin",
-        Date: "2025-09-24",
+        Date: "2025-09-23",
         Location: "SERC 3rd Floor Room 358",
         Time: "5:00pm",
         eventUrl: "/events/lockheedmartin",
