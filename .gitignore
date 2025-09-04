@@ -1,2 +1,2 @@
 docker-compose.yml
-backend/src/database/data.db
+data/*
