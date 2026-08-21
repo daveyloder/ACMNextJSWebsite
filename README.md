@@ -1,128 +1,113 @@
-# ACM Temple University Website
+# ACM Temple University — Frontend
 
-This is the official website for the **Association for Computing Machinery (ACM)** at Temple University. The website was built using **Next.js** and developed in collaboration with **TUDev**, Temple University's community of hackers and makers.
-
-## Table of Contents
-
-1. [About ACM](#about-acm)
-2. [Built With](#built-with)
-3. [Collaboration](#collaboration)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Development](#development)
-7. [Contributing](#contributing)
-8. [License](#license)
+This is the official website for the **Association for Computing Machinery (ACM)** at Temple University, built with **Next.js**. The frontend runs as a standalone static site and does not require a backend to operate.
 
 ---
 
-## About ACM
+## Purpose
 
-The **Association for Computing Machinery (ACM)** at Temple University is dedicated to fostering a community of tech enthusiasts and future innovators. Our club provides opportunities for learning, networking, and engaging in various computing and tech-related activities. Join us to get involved with hackathons, workshops, and more!
-
-## Built With
-
-This website is built using the following technologies and dependencies:
-
-- **Next.js**: React-based framework for building static and dynamic websites.
-- **React**: JavaScript library for building user interfaces.
-- **Bootstrap**: Popular CSS framework for building responsive layouts.
-- **Bootstrap Icons**: Icon library that integrates with Bootstrap.
-- **React Icons**: A set of popular icons as React components.
-- **Reactstrap**: React components for Bootstrap, used for responsive and mobile-first UI design.
-
-### Full List of Dependencies
-
-- **bootstrap**: `^5.3.3`
-- **bootstrap-icons**: `^1.11.3`
-- **next**: `15.1.3`
-- **react**: `^18.2.0`
-- **react-dom**: `^18.2.0`
-- **react-icons**: `^5.4.0`
-- **reactstrap**: `^9.2.3`
-
-## Collaboration
-
-This project was developed in partnership with **TUDev**, Temple University's community of hackers and makers. The collaboration aimed to combine ACM's mission to engage with the computing community and TUDev's focus on development and hacking culture.
+This site serves as the public-facing presence for ACM at Temple University. It displays club information, the member roster, and upcoming events. All content is managed through static data files — no database or CMS is required.
 
 ---
 
-## Installation
+## Tech Stack
 
-To get started with this project, clone the repository and follow the steps below.
+- **Next.js 15** — React framework
+- **React 18** — UI library
+- **Bootstrap 5** — CSS framework
+- **Reactstrap** — Bootstrap components for React
+- **React Icons** — Icon library
+- **date-fns** — Date formatting
 
-### 1. Clone the Repository
+---
 
-```bash
-git clone https://github.com/daveyloder/ACMNextJSWebsite.git
-cd ACMNextJSWebsite
-```
+## Getting Started
 
-### 2. Install Dependencies
-
-Install the necessary dependencies using npm or yarn:
+### 1. Install dependencies
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
-## Usage
-
-To run the project locally, use the following command:
+### 2. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-This will start the development server at http://localhost:3000. Open your browser and visit this address to view the website locally.
+The site will be available at `http://localhost:3000`.
 
-## Development
-
-Starting the Development Server
-To start the development server, run:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-This will allow you to view changes live as you develop. The server will watch for changes and automatically reload the page.
-
-### Build for Production
-
-Once your changes are ready for production, build the optimized production version of the app:
+### 3. Build for production
 
 ```bash
 npm run build
-# or
-yarn build
-```
-
-Run the Production Build Locally
-You can test the production build locally before deploying:
-
-```bash
 npm run start
-# or
-yarn start
 ```
 
-## Contributing
+---
 
-We welcome contributions from students, developers, and all members of the Temple University community! If you would like to contribute, please follow these steps:
+## Updating Content
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Make your changes and commit them (`git commit -m 'Add new feature'`)
-4. Push to your branch (`git push origin feature-name`)
-5. Open a pull request
+All site content is managed through static files. No backend or database access is needed.
 
-For major changes, please open an issue first to discuss what you would like to change.
+### Members Roster
 
-## License
+**File:** `app/_shared/MEMBERS.js`
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Add or remove members by editing the `MEMBERS` array. Each member follows this structure:
+
+```js
+{
+  id: 1,
+  firstName: "Jane",
+  lastName: "Doe",
+  positionName: "President",
+  campusEmail: "jane.doe@temple.edu",
+}
+```
+
+The roster page displays **name and position only**. The email field is stored in the file but is not shown on the site.
+
+---
+
+### Events
+
+**File:** `app/_shared/EVENTS.js`
+
+Add events by adding objects to the `EVENTS` array. Events are automatically sorted into **Current**, **Upcoming**, and **Past** sections based on their date.
+
+Each event follows this structure:
+
+```js
+{
+  id: 1,                             // unique number, increment for each new event
+  Title: "Intro to Web Dev Workshop",
+  Date: "2025-09-15T18:00:00",       // ISO 8601 format (YYYY-MM-DDTHH:MM:SS)
+  Location: "Room 101, SERC",
+  eventUrl: "https://...",           // optional: link to RSVP or event page, defaults to "/"
+  eventType: "Workshop",             // optional: defaults to "General"
+  club: { Name: "ACM" },             // optional: organizing club name
+  coverImage: null,                  // set to null if no image
+  Description: [
+    { children: [{ text: "A beginner-friendly workshop on web development." }] }
+  ],
+}
+```
+
+To remove an event, delete its entry from the array. Past events will still appear in the Past Events section as long as they remain in the file.
+
+---
+
+## Project Structure
+
+```
+app/
+├── _components/       # Reusable UI components (navbar, header, cards, etc.)
+├── _shared/           # Static data files
+│   ├── MEMBERS.js     # Member roster data
+│   └── EVENTS.js      # Events data
+├── events/            # Events pages
+├── members/           # Members roster page
+├── page.js            # Homepage
+└── layout.js          # Root layout (navbar, footer)
+```

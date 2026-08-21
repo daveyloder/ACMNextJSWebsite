@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import BootstrapClient from "@/app/_components/BootstrapClient";
 import "./globals.css";
 import PreFooter from "./_components/footers/PreFooter";
